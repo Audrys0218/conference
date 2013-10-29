@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login form</title>
+    #parse("blocks/head.vm")
+    <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    #parse("blocks/nav.vm")
+    <div class="wrapper">
+        <div class="tablebody">
+            <div class="tabletitle">Witch I created</div>
+            <table class="createdtable">
+                    <thead>
+                    <tr>
+                        <th>Conference name</th>
+                        <th>Starts</th>
+                        <th>Ends</th>
+                        <th>Image1</th>
+                        <th>Image2</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Informacines technologijos</td>
+                        <td>2013-02-13</td>
+                        <td>2013-02-13</td>
+                        <td><a href="">Edit</a></td>
+                        <td><a href="">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ziniasklaidos indzinerija</td>
+                        <td>2013-02-13</td>
+                        <td>2013-02-13</td>
+                        <td><a href="">Edit</a></td>
+                        <td><a href="">Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>Css ir html</td>
+                        <td>2013-02-13</td>
+                        <td>2013-02-13</td>
+                        <td><a href="">Edit</a></td>
+                        <td><a href="">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- -->
+        </div>
+        <div class="tablebody">
+            <div class="tabletitle">Which I participated</div>
+            <table class="participatetable">
+                <thead>
+                <tr>
+                    <th>Conference name</th>
+                    <th>Starts</th>
+                    <th>Ends</th>
+                    <th><a href="">CancelImg</a></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Informacines technologijos</td>
+                    <td>2013-02-13</td>
+                    <td>2013-02-13</td>
+                    <td><a href="">Cancel</a></td>
+                </tr>
+                <tr>
+                    <td>Ziniasklaidos indzinerija</td>
+                    <td>2013-02-13</td>
+                    <td>2013-02-13</td>
+                    <td><a href="">Cancel</a></td>
+                </tr>
+                <tr>
+                    <td>Css ir html</td>
+                    <td>2013-02-13</td>
+                    <td>2013-02-13</td>
+                    <td><a href="">Cancel</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    <div>
+</body>
+</html>
