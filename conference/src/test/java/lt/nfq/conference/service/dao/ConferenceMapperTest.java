@@ -104,11 +104,16 @@ public class ConferenceMapperTest extends DaoTestBase {
 		String name = "New Conference name";
 		String fromDate = "2013-11-10 10:00:00";
 		String endDate = "2013-11-11 12:00:00";
-
+        String description = "Very short description";
+        Integer category_id = 1;
+        Integer creator_id = 1;
 		Conference conference = new Conference();
 		conference.setName(name);
 		conference.setStartDate(parseDate(fromDate));
 		conference.setEndDate(parseDate(endDate));
+        conference.setCategory_id(category_id);
+        conference.setDescription(description);
+        conference.setCreator_id(creator_id);
 		assertEquals(1, mapper.insertConference(conference));
 		
 		Assert.assertNotNull(conference.getId());

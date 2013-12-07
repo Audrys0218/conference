@@ -5,66 +5,17 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.min.css" type="text/css">
         #parse("blocks/head.vm")
     </head>
-    <!--
-    <style>
-        #nav {
-            width: 100%;
-            float: left;
-            margin: 0 0 0 0;
-            padding: 0;
-            list-style: none;
-            background-color: #f2f2f2;
-            border-bottom: 1px solid #ccc;
-            border-top: 1px solid #ccc; }
-        #nav li {
-            float: left; }
-        #nav li a {
-            display: block;
-            padding: 8px 15px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #069;
-            border-right: 1px solid #ccc; }
-        #nav li a:hover {
-            color: #c00;
-            background-color: #fff; }
-    </style>
-    -->
     <body>
-    <!--
-        <ul id ="nav">
-            <li><a href="/conference/list">Conferences</a></li>
-            <li><a href="/createConference">Create conference</a></li>
-            <li><a href="/registration">Registration</a></li>
-        </ul>
-        -->
         #parse("blocks/nav.vm")
         <div class="clearfix"></div>
             <div class="wrapper">
                 <form method="post" action="" class="form2">
-                    <!--
-                    <fieldset>
-                        <div class="formtitle">Search filter</div>
-                        <div class="formGroup">
-                            <label for="filterStart">Start date</label>
-                            <input type="text" name="start" value="$startDate" id="filterStart" class="datePicker">
-                        </div>
-                        <div class="formGroup">
-                            <label for="filterEnd">End date</label>
-                            <input type="text" name="end" value="$endDate" id="filterEnd" class="datePicker">
-                        </div>
-                        <div class="formGroup">
-                            <input type="submit" value="Search">
-                            <input type="reset" value="Reset">
-                        </div>
-                    </fieldset>
-                     -->
                     <div class="formtitle">Search filter</div>
                     <div class="input">
                         <div class="inputtext">Start date </div>
                         <div class="inputcontent">
 
-                            <input type="text" name="start" value="$startDate" class="datePicker" />
+                            <input type="text" name="start" value="$startDate" id="filterStart"  class="datePicker" />
 
                         </div>
                     </div>
@@ -73,7 +24,7 @@
                         <div class="inputtext">End date </div>
                         <div class="inputcontent">
 
-                            <input type="text" name="end" value="$endDate" class="datePicker" />
+                            <input type="text" name="end" value="$endDate"  id="filterEnd" class="datePicker" />
 
                         </div>
                     </div>
@@ -81,11 +32,12 @@
                     <div class="input">
                         <div class="inputtext">Category </div>
                         <div class="inputcontent">
-
-                            <select class="select">
-                                <option>Categiry 1</option>
-                                <option>Category 2</option>
-                                <option>Categiry 3</option>
+                            <select class="select" name="category_id" id="category">
+                                #if($categories.size() > 0))
+                                    #foreach($category in $categories)
+                                        <option value="$category.getId()">$category.getTitle()</option>
+                                    #end
+                                #end
                             </select>
 
                         </div>
@@ -95,56 +47,16 @@
 
                         <input class="orangebutton" type="submit" value="Search" />
 
-                        <input class="greybutton" type="submit" value="Reset" />
+                        <input class="greybutton" type="reset" value="Reset" />
 
                     </div>
                 </form>
-
-            <!--
-                <fieldset>
-                    <legend>Conference list:</legend>
-                    <div id="conference">
+                      <div id="conference">
                         #if ($conferenceList)
                             #parse("conference/items.vm")
                         #end
-                    </div>
-                </fieldset>
-                <div id="conferenceForm"></div>
-                -->
-                <div class="tablebody">
-                    <div class="tabletitle">Conferences</div>
-                    <table class="participatetable">
-                        <thead>
-                        <tr>
-                            <th>Conference name</th>
-                            <th>Starts</th>
-                            <th>Ends</th>
-                            <th><a href="">Img</a></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Informacines technologijos</td>
-                            <td>2013-02-13</td>
-                            <td>2013-02-13</td>
-                            <td><a href="">Participate</a></td>
-                        </tr>
-                        <tr>
-                            <td>Ziniasklaidos indzinerija</td>
-                            <td>2013-02-13</td>
-                            <td>2013-02-13</td>
-                            <td><a href="">Participate</a></td>
-                        </tr>
-                        <tr>
-                            <td>Css ir html</td>
-                            <td>2013-02-13</td>
-                            <td>2013-02-13</td>
-                            <td><a href="">Participate</a></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                      </div>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
         <script src="/resources/js/list.js"></script>

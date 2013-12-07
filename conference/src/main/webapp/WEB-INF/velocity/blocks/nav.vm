@@ -1,8 +1,8 @@
 
 <ul id ="nav">
     <li><a href="/conference/list">Conferences</a></li>
-    <li><a href="/myConferences">My conferences</a></li>
-    <li><a href="/createConference">Create conference</a></li>
+    <li><a href="/lists">My conferences</a></li>
+    <li><a href="/conference/create">Create conference</a></li>
     <li><a href="/registration">Registration</a></li>
 </ul>
 <div class="clearfix"></div>

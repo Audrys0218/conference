@@ -15,6 +15,10 @@ public class ConferenceService {
     @Autowired
     private ConferenceMapper conferenceMapper;
 
+    public List<Conference> getConferences(){
+        return conferenceMapper.getConferences();
+    }
+
     public List<Conference> getConferencesByDates(Date start, Date end) {
         return conferenceMapper.getConferencesByDates(start, end);
     }

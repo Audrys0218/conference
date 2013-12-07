@@ -2,14 +2,18 @@ package lt.nfq.conference.controller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
+import java.util.*;
+
+import lt.nfq.conference.ModelView.NewConferenceViewModel;
+import lt.nfq.conference.domain.Category;
 import lt.nfq.conference.domain.Conference;
+import lt.nfq.conference.service.CategoryService;
 import lt.nfq.conference.service.ConferenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,12 +22,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.validation.Valid;
+
 @Controller
 @RequestMapping(value = "/conference")
 public class ConferenceController {
 
     @Autowired
     private ConferenceService conferenceService;
+    @Autowired
+    private CategoryService categoryService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list(ModelMap model) {
@@ -36,11 +44,12 @@ public class ConferenceController {
         model.addAttribute("startDate", startDate);
         model.addAttribute("endDate", endDate);
         model.addAttribute("dateFormat", simpleDateFormat);
-
+        model.addAttribute("categories", categoryService.getCategories());
         try {
             model.addAttribute("conferenceList", conferenceService.getConferencesByDates(simpleDateFormat.parse(startDate), simpleDateFormat.parse(endDate)));
         } catch (ParseException e) {
-
+            System.out.println("Problem with finding conferenceList by given startDate and endDate");
+            e.printStackTrace();
         }
 
         return "conference/list";
@@ -49,18 +58,36 @@ public class ConferenceController {
     @RequestMapping(value = "/list", method = RequestMethod.POST)
     public String filterList(ModelMap model,
                              @RequestParam(value = "start") Date start,
-                             @RequestParam(value = "end") Date end) {
-
-        model.addAttribute("conferenceList", conferenceService.getConferencesByDates(start, end));
+                             @RequestParam(value = "end") Date end,
+                             @RequestParam(value = "category_id") int category_id) {
+        LinkedList<Conference> conferenceList =  conferencesWithCateCategory_id(conferenceService.getConferencesByDates(start, end), category_id);
+        model.addAttribute("conferenceList", conferenceList);
         model.addAttribute("dateFormat", getDateFormat());
 
         return "conference/items";
     }
-
-    @RequestMapping(value = "/create")
+    private LinkedList<Conference> conferencesWithCateCategory_id(List<Conference> list,int id){
+        LinkedList<Conference> result = new LinkedList<>();
+        for(Conference a: list){
+            if(a.getCategory_id()==id){
+                result.add(a);
+            }
+        }
+        return result;
+    }
+    @RequestMapping(value = "/create", method = RequestMethod.GET)
     public String create(ModelMap model) {
-        model.addAttribute("conference", new Conference());
+        model.addAttribute("catTitles", catTitles(categoryService.getCategories()));
+        model.addAttribute("conMod", new NewConferenceViewModel());
         return "conference/form";
+    }
+
+    private Map<Integer, String> catTitles(LinkedList<Category> categories){
+        Map<Integer, String> result = new HashMap<>();
+        for (Category category : categories) {
+            result.put(category.getId(), category.getTitle());
+        }
+        return result;
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.GET)
@@ -95,4 +122,44 @@ public class ConferenceController {
         dateFormat.setLenient(false);
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
     }
+
+    //Mano requestmappingai
+
+    @RequestMapping(value = "/save1", method = RequestMethod.POST)
+    public String save1(@ModelAttribute("conMod") @Valid NewConferenceViewModel newConferenceViewModel, BindingResult result, ModelMap model){
+
+        if(result.hasErrors()){
+            model.addAttribute("catTitles", catTitles(categoryService.getCategories()));
+            return "conference/form";
+        }
+        Conference conference = null;
+        try {
+            conference = newConferenceViewModelToConference(newConferenceViewModel);
+            conferenceService.saveConference(conference);
+            System.out.print("=============================");
+            System.out.println(conferenceService.getConferences());
+        } catch (ParseException e) {
+            //Aprasyti veiksmus, kai į datos laukelis suvedami blogo formato duomenys
+            e.printStackTrace();
+        }
+        System.out.print(conference);
+        return "myConferences";
+    }
+
+    private Conference newConferenceViewModelToConference(NewConferenceViewModel newConferenceViewModel) throws ParseException {
+        Conference conference = new Conference();
+        if(newConferenceViewModel.getId() != ""){
+            conference.setId(Integer.valueOf(newConferenceViewModel.getId()));
+        }
+        conference.setName(newConferenceViewModel.getTitle());
+        Date starts = getDateFormat().parse(newConferenceViewModel.getStarts());
+        Date ends   = getDateFormat().parse(newConferenceViewModel.getEnds());
+        conference.setStartDate(starts);
+        conference.setEndDate(ends);
+        conference.setCategory_id(newConferenceViewModel.getCategory_id());
+        conference.setDescription(newConferenceViewModel.getDescription());
+        conference.setCreator_id(Integer.valueOf(1));
+        return  conference;
+    }
+
 }

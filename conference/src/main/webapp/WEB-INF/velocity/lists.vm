@@ -3,7 +3,6 @@
 <head>
     <title>Login form</title>
     #parse("blocks/head.vm")
-    <link rel="stylesheet" href="/resources/css/style.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -11,7 +10,7 @@
     #parse("blocks/nav.vm")
     <div class="wrapper">
         <div class="tablebody">
-            <div class="tabletitle">Witch I created</div>
+            <div class="tabletitle">Which I created</div>
             <table class="createdtable">
                     <thead>
                     <tr>

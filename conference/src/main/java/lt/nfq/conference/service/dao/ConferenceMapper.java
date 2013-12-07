@@ -5,17 +5,13 @@ import java.util.List;
 
 import lt.nfq.conference.domain.Conference;
 
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectKey;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 public interface ConferenceMapper {
 
     @Select("SELECT * FROM conference WHERE id=#{id}")
     public Conference getConference(@Param("id") int id);
+
 
     @Select("SELECT * FROM conference")
     public List<Conference> getConferences();
@@ -28,7 +24,7 @@ public interface ConferenceMapper {
     public int updateConference(Conference conference);
 
     @Options(flushCache=true)
-    @Insert("INSERT INTO conference (name, startDate, endDate) VALUES (#{name}, #{startDate}, #{endDate})")
+    @Insert("INSERT INTO conference (name, startDate, endDate, description, category_id, creator_id) VALUES (#{name}, #{startDate}, #{endDate}, #{description}, #{category_id}, #{creator_id})")
     @SelectKey(statement="CALL IDENTITY()", keyProperty="id", before=false, resultType=int.class)
     public int insertConference(Conference conference);
     

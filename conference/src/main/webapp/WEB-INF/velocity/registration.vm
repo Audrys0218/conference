@@ -1,91 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registration form</title>
+    <title>Conference form</title>
     #parse("blocks/head.vm")
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     #parse("blocks/nav.vm")
-    <div class="wrapper">
-        <form class="form2" action="index.html">
+<div class="wrapper">
+    <form class = "form2" action="/registration" method="POST">
 
-            <div class="formtitle">Registration</div>
+        <div class="formtitle">Create conference</div>
 
-            <div class="input">
-                <div class="inputtext">Your Name: </div>
-                <div class="inputcontent">
+        <div class="input">
+            <div class="inputtext">Name:</div>
+            <div class="inputcontent">
+##                <input type="text" name="name"/>
+                #springFormInput("regModel.name", "")
+                #springShowErrors("", "formFieldError")
+            </div>
+        </div>
 
-                    <input type="text" />
+        <div class="input">
+            <div class="inputtext">Surname:</div>
+            <div class="inputcontent">
+##                <input type="text" name="surname"/>
+                    #springFormInput("regModel.surname", "")
+                    #springShowErrors("", "formFieldError")
+            </div>
+        </div>
+        <div class="input">
+            <div class="inputtext">User name:</div>
+            <div class="inputcontent">
+                    #springFormInput("regModel.username", "")
+                    #springShowErrors("", "formFieldError")
+            </div>
+        </div>
 
-                </div>
+        <div class="input">
+            <div class="inputtext">Password:</div>
+            <div class="inputcontent">
+                    #springFormPasswordInput("regModel.password", "")
+                    #springShowErrors("", "formFieldError")
+            </div>
+        </div>
+        <div class="input">
+            <div class="inputtext">Repeat password:</div>
+            <div class="inputcontent">
+                    #springFormPasswordInput("regModel.retypedPassword", "")
+                    #springShowErrors("", "formFieldError")
+            </div>
+        </div>
+        <div class="input">
+            <div class="inputtext">Email:</div>
+            <div class="inputcontent">
+                    #springFormInput("regModel.email", "")
+                    #springShowErrors("", "formFieldError")
+            </div>
+        </div>
+        <div class="input">
+            <div class="inputtext">Repeat Email:</div>
+            <div class="inputcontent">
+                    #springFormInput("regModel.retypedEmail", "")
+                    #springShowErrors("", "formFieldError")
             </div>
 
-            <div class="input">
-                <div class="inputtext">Your Surname: </div>
-                <div class="inputcontent">
+        </div>
+        <div class="buttons">
 
-                    <input type="text" />
+            <input class="orangebutton" type="submit" value="Send" />
 
-                </div>
-            </div>
-
-            <div class="input">
-                <div class="inputtext">Your Password: </div>
-                <div class="inputcontent">
-
-                    <input type="text" />
-
-                </div>
-            </div>
-
-            <div class="input">
-                <div class="inputtext">Retype Password: </div>
-                <div class="inputcontent">
-
-                    <input type="text" />
-
-                </div>
-            </div>
-
-            <div class="input">
-                <div class="inputtext">Your Email: </div>
-                <div class="inputcontent">
-
-                    <input type="text" />
-
-                </div>
-            </div>
-            <div class="input">
-                <div class="inputtext">Retype Email: </div>
-                <div class="inputcontent">
-
-                    <input type="text" />
-
-                </div>
-            </div>
-
-            <div class="input">
-                <div class="inputtext">Country/Town: </div>
-                <div class="inputcontent">
-
-                    <select class="select">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select>
-
-                </div>
-            </div>
-
-            <div class="buttons">
-
-                <input class="orangebutton" type="submit" value="Send" />
-
-            </div>
-
-        </form>
-    </div>
+        </div>
+    </form>
+    <div>
 </body>
 </html>

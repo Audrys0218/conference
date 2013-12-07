@@ -42,7 +42,7 @@ public class PlainConferenceController {
 	    }
 
 	    public void setId(Integer id) {
-	        conference.setId(id);;
+	        conference.setId(id);
 	    }
 
 	    @NotNull
