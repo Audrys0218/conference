@@ -22,27 +22,22 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Informacines technologijos</td>
-                        <td>2013-02-13</td>
-                        <td>2013-02-13</td>
-                        <td><a href="">Edit</a></td>
-                        <td><a href="">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Ziniasklaidos indzinerija</td>
-                        <td>2013-02-13</td>
-                        <td>2013-02-13</td>
-                        <td><a href="">Edit</a></td>
-                        <td><a href="">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Css ir html</td>
-                        <td>2013-02-13</td>
-                        <td>2013-02-13</td>
-                        <td><a href="">Edit</a></td>
-                        <td><a href="">Delete</a></td>
-                    </tr>
+                        #foreach($conference in $createdConf)
+                        <tr data-id="$conference.getId()">
+                            <td>$conference.getName()</td>
+                            <td>$conference.getStartDate($dateFormat)</td>
+                            <td>$conference.getEndDate($dateFormat)</td>
+                            <td><a href="/conference/update?id=$conference.getId()" >Edit</a></td>
+                            <td><a href="/conference/delete?id=$conference.getId()" >Delete</a></td>
+                        </tr>
+                        #end
+##                    <tr>
+##                        <td>Informacines technologijos</td>
+##                        <td>2013-02-13</td>
+##                        <td>2013-02-13</td>
+##                        <td><a href="">Edit</a></td>
+##                        <td><a href="">Delete</a></td>
+##                    </tr>
                 </tbody>
             </table>
             <!-- -->

@@ -15,6 +15,10 @@ public class ConferenceService {
     @Autowired
     private ConferenceMapper conferenceMapper;
 
+    public List<Conference> getConferencesByCreatorId(int creator_id){
+        return conferenceMapper.getConferenceByCreatorId(creator_id);
+    }
+
     public List<Conference> getConferences(){
         return conferenceMapper.getConferences();
     }

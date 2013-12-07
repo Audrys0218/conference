@@ -22,6 +22,7 @@
 		<mapper class="lt.nfq.conference.service.dao.ConferenceMapper" />
         <mapper class="lt.nfq.conference.service.dao.UserMapper" />
         <mapper class="lt.nfq.conference.service.dao.CategoryMapper" />
+        <mapper class="lt.nfq.conference.service.dao.ParticipantsMapper" />
 	</mappers>
 
 </configuration>

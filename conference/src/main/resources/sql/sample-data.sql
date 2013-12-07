@@ -9,9 +9,9 @@ INSERT INTO demo (id, data) VALUES (3, 'Hello, world for the third time!');
 -- INSERT INTO conference (id, name, startDate, endDate) VALUES (4, 'Web puslapių vartotojo sąsajos kūrimas (1-a dalis)', '2013-10-09 17:00:00', '2013-10-09 18:00:00');
 -- INSERT INTO conference (id, name, startDate, endDate) VALUES (5, 'Web puslapių vartotojo sąsajos kūrimas (2-a dalis)', '2013-11-27 17:00:00', '2013-11-27 17:00:00');
 
-INSERT INTO conference (id, name, startDate, endDate, description, category_id, creator_id) VALUES (1, 'Conference A', '2013-09-30 17:00:00', '2013-09-30 18:00:00', 'Simple description', 1, 1);
-INSERT INTO conference (id, name, startDate, endDate, description, category_id, creator_id) VALUES (2, 'Conference B', '2013-10-01 17:00:00', '2013-10-02 18:00:00', 'Simple description', 1, 1);
-INSERT INTO conference (id, name, startDate, endDate, description, category_id, creator_id) VALUES (3, 'Conference C', '2013-10-20 00:00:00', '2013-10-30 00:00:00', 'Simple description', 1, 1);
+INSERT INTO conference (id, name, startDate, endDate, description, city, street, category_id, creator_id) VALUES (1, 'Conference A', '2013-09-30 17:00:00', '2013-09-30 18:00:00', 'Simple description', 'Kaunas', 'Vytauto', 1, 1);
+INSERT INTO conference (id, name, startDate, endDate, description, city, street, category_id, creator_id) VALUES (2, 'Conference B', '2013-10-01 17:00:00', '2013-10-02 18:00:00', 'Simple description', 'Kaunas', 'Vytauto', 2, 1);
+INSERT INTO conference (id, name, startDate, endDate, description, city, street, category_id, creator_id) VALUES (3, 'Conference C', '2013-10-20 00:00:00', '2013-10-30 00:00:00', 'Simple description', 'Kaunas', 'Vytauto', 3, 1);
 
 
 INSERT INTO Users (id, name, surname, username, password, email) VALUES (1, 'AudriusA', 'ADanielevicius', 'AAudrys0218', 'AApassword', 'AAudrys0218@gmail.com');

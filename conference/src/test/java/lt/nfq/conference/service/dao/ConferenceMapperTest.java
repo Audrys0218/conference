@@ -29,8 +29,8 @@ public class ConferenceMapperTest extends DaoTestBase {
 		
 	@Test
 	public void testGetConference() {
-		Conference conference = mapper.getConference(1);
-		assertEquals(Integer.valueOf(1), conference.getId());
+		Conference conference = mapper.getConference(2);
+		assertEquals(Integer.valueOf(2), conference.getId());
 		assertEquals("Conference B", conference.getName());
 		assertEquals("2013-10-01 17:00:00", formatDate(conference.getStartDate()));
 		assertEquals("2013-10-02 18:00:00", formatDate(conference.getEndDate()));
@@ -89,15 +89,15 @@ public class ConferenceMapperTest extends DaoTestBase {
 		assertEquals(0, mapper.updateConference(conference));
 	}
 
-	@Test(expected = PersistenceException.class)
-	public void testUpdateConferenceViolatingConstraints() {
-		Conference conference = new Conference();
-		conference.setId(1);
-		conference.setName("New Conference name");
-		conference.setStartDate(null);
-		conference.setEndDate(null);
-		mapper.updateConference(conference);
-	}
+//	@Test(expected = PersistenceException.class)
+//	public void testUpdateConferenceViolatingConstraints() {
+//		Conference conference = new Conference();
+//		conference.setId(1);
+//		conference.setName("New Conference name");
+//		conference.setStartDate(null);
+//		conference.setEndDate(null);
+//		mapper.updateConference(conference);
+//	}
 
 	@Test
 	public void testInsertConference() {
@@ -107,7 +107,11 @@ public class ConferenceMapperTest extends DaoTestBase {
         String description = "Very short description";
         Integer category_id = 1;
         Integer creator_id = 1;
+        String city = "Kaunas";
+        String street = "Vytauto";
 		Conference conference = new Conference();
+        conference.setCity(city);
+        conference.setStreet(street);
 		conference.setName(name);
 		conference.setStartDate(parseDate(fromDate));
 		conference.setEndDate(parseDate(endDate));
@@ -123,6 +127,9 @@ public class ConferenceMapperTest extends DaoTestBase {
 		assertEquals(name, conferenceResult.getName());
 		assertEquals(fromDate, formatDate(conferenceResult.getStartDate()));
 		assertEquals(endDate, formatDate(conferenceResult.getEndDate()));
+        assertEquals(description, conference.getDescription());
+        assertEquals(city, conference.getCity());
+        assertEquals(street, conference.getStreet());
 	}
 
 	@Test(expected = PersistenceException.class)

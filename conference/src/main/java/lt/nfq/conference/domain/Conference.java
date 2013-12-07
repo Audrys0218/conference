@@ -4,13 +4,32 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Conference {
+
     private Integer id;
     private String name;
     private Date startDate;
     private Date endDate;
     private String description;
+    private String city;
+    private String street;
     private Integer category_id;
     private Integer creator_id;
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public Integer getId() {
         return id;
@@ -83,6 +102,8 @@ public class Conference {
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", description='" + description + '\'' +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
                 ", category_id=" + category_id +
                 ", creator_id=" + creator_id +
                 '}';

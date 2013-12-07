@@ -92,36 +92,37 @@ public class ConferenceController {
 
     @RequestMapping(value = "/update", method = RequestMethod.GET)
     public String update(ModelMap model, @RequestParam(value = "id") int id) {
-        model.addAttribute("conference", conferenceService.getConference(id));
+        NewConferenceViewModel m = ConferenceToNewConferencViewModel(conferenceService.getConference(id));
+        model.addAttribute("catTitles", catTitles(categoryService.getCategories()));
+        model.addAttribute("conMod", m);
         model.addAttribute("dateFormat", getDateFormat());
         return "conference/form";
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public
-    @ResponseBody
-    HashMap<String, String> save(@ModelAttribute("conference") Conference conference) {
-        HashMap<String, String> response = new HashMap<String, String>();
-        if (conferenceService.updateConference(conference)) {
-            response.put("success", "saved");
-        } else {
-            response.put("error", "error with saving");
-        }
-        response.put("status", "ok");
-        return response;
-    }
-
+//    @RequestMapping(value = "/save", method = RequestMethod.POST)
+//    public
+//    @ResponseBody
+//    HashMap<String, String> save(@ModelAttribute("conference") Conference conference) {
+//        HashMap<String, String> response = new HashMap<String, String>();
+//        if (conferenceService.updateConference(conference)) {
+//            response.put("success", "saved");
+//        } else {
+//            response.put("error", "error with saving");
+//        }
+//        response.put("status", "ok");
+//        return response;
+//    }
 
     private SimpleDateFormat getDateFormat() {
         return new SimpleDateFormat("yyyy-MM-dd");
     }
 
-    @InitBinder
-    public void initBinder(WebDataBinder binder) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        dateFormat.setLenient(false);
-        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
-    }
+//    @InitBinder
+//    public void initBinder(WebDataBinder binder) {
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//        dateFormat.setLenient(false);
+//        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+//    }
 
     //Mano requestmappingai
 
@@ -136,14 +137,13 @@ public class ConferenceController {
         try {
             conference = newConferenceViewModelToConference(newConferenceViewModel);
             conferenceService.saveConference(conference);
-            System.out.print("=============================");
-            System.out.println(conferenceService.getConferences());
+            model.addAttribute("createdConf", conferenceService.getConferencesByCreatorId(1));
+            model.addAttribute("dateFormat", getDateFormat());
         } catch (ParseException e) {
             //Aprasyti veiksmus, kai į datos laukelis suvedami blogo formato duomenys
             e.printStackTrace();
         }
-        System.out.print(conference);
-        return "myConferences";
+        return "lists";
     }
 
     private Conference newConferenceViewModelToConference(NewConferenceViewModel newConferenceViewModel) throws ParseException {
@@ -159,7 +159,21 @@ public class ConferenceController {
         conference.setCategory_id(newConferenceViewModel.getCategory_id());
         conference.setDescription(newConferenceViewModel.getDescription());
         conference.setCreator_id(Integer.valueOf(1));
+        conference.setStreet(newConferenceViewModel.getStreet());
+        conference.setCity(newConferenceViewModel.getCity());
         return  conference;
+    }
+    private NewConferenceViewModel ConferenceToNewConferencViewModel(Conference conference){
+        NewConferenceViewModel result = new NewConferenceViewModel();
+        result.setId(conference.getId().toString());
+        result.setStreet(conference.getStreet());
+        result.setCity(conference.getCity());
+        result.setCategory_id(conference.getCategory_id());
+        result.setStarts(getDateFormat().format(conference.getStartDate()));
+        result.setEnds(getDateFormat().format(conference.getEndDate()));
+        result.setDescription(conference.getDescription());
+        result.setTitle(conference.getName());
+        return result;
     }
 
 }

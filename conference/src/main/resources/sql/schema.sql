@@ -2,6 +2,7 @@ DROP TABLE conference;
 DROP TABLE Users;
 DROP TABLE demo;
 DROP TABLE Categories;
+DROP TABLE Participants;
 
 CREATE TABLE demo (
 	id IDENTITY PRIMARY KEY,
@@ -14,6 +15,8 @@ CREATE TABLE conference (
     startDate DATETIME NOT NULL,
     endDate DATETIME NOT NULL,
     description varchar(1000),
+    city varchar(255) NOT NULL,
+    street varchar(255) NOT NULL,
     category_id int NOT NULL,
     creator_id int NOT NULL
 );
@@ -30,6 +33,12 @@ CREATE TABLE  Users(
 CREATE TABLE Categories(
   id IDENTITY PRIMARY KEY,
   category_title varchar(255) NOT NULL
+);
+
+CREATE TABLE Participants(
+  id IDENTITY PRIMARY KEY,
+  participant_id int NOT NULL,
+  conference_id int NOT NULL
 );
 
 CREATE INDEX startDate ON conference (startDate);
