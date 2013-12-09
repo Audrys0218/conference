@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d778769-8e2a-4d15-ae59-249547aa952a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/loginFailed.vm" />
-      <change type="DELETED" beforePath="C:\Users\Audrius\workspace\conference\conference\.idea\libraries\Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Audrius\workspace\conference\conference\.idea\libraries\Maven__org_springframework_spring_aop_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Audrius\workspace\conference\conference\.idea\libraries\Maven__org_springframework_spring_beans_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Audrius\workspace\conference\conference\.idea\libraries\Maven__org_springframework_spring_context_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Audrius\workspace\conference\conference\.idea\libraries\Maven__org_springframework_spring_core_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Audrius\workspace\conference\conference\.idea\libraries\Maven__org_springframework_spring_expression_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Audrius\workspace\conference\conference\.idea\libraries\Maven__org_springframework_spring_tx_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Audrius\workspace\conference\conference\.idea\libraries\Maven__org_springframework_spring_web_3_2_4_RELEASE.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/ConferenceController.java" afterPath="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/ConferenceController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/UserConferencesController.java" afterPath="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/UserConferencesController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conference.iml" afterPath="$PROJECT_DIR$/conference.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/conference_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/conference_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/login.vm" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/login.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/blocks/nav.vm" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/blocks/nav.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sql/sample-data.sql" afterPath="$PROJECT_DIR$/src/main/resources/sql/sample-data.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" afterPath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/sql/test-data.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/test-data.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Conference.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386601465658" ignored="false" />
+    <file path="/Dummy.txt" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386613527243" ignored="false" />
     <file path="/a.dummy" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386358486374" ignored="false" />
     <file path="/fragment.java" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386450599382" ignored="false" />
     <file path="/RegistrationController.java" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386521372849" ignored="false" />
@@ -36,7 +15,7 @@
     <file path="/RegistrationViewModel.java" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386418115095" ignored="false" />
     <file path="/registration.vm" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386421360302" ignored="false" />
     <file path="/style.css" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386421178582" ignored="false" />
-    <file path="/ConferenceController.java" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386599162928" ignored="false" />
+    <file path="/ConferenceController.java" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386614019323" ignored="false" />
     <file path="/items.vm" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386599538468" ignored="false" />
     <file path="/list.js" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386596623547" ignored="false" />
     <file path="/list.vm" changelist="2d778769-8e2a-4d15-ae59-249547aa952a" time="1386433818235" ignored="false" />
@@ -132,7 +111,7 @@
       <file leaf-file-name="ConferenceController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/ConferenceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="13" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
+            <state line="203" column="25" selection-start="9145" selection-end="9145" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,43 +120,16 @@
       <file leaf-file-name="login.vm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/login.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="41" selection-start="554" selection-end="554" vertical-scroll-proportion="-8.5">
+            <state line="19" column="41" selection-start="554" selection-end="554" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.vm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/blocks/nav.vm">
+      <file leaf-file-name="lists.vm" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/lists.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="33" selection-start="283" selection-end="283" vertical-scroll-proportion="-3.9230769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-security.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="44" selection-start="1159" selection-end="1159" vertical-scroll-proportion="-1.72">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.vm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/conference/form.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="41.192307">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserConferencesController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/UserConferencesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="49" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
+            <state line="64" column="36" selection-start="2617" selection-end="2617" vertical-scroll-proportion="2.3247864">
               <folding />
             </state>
           </provider>
@@ -192,28 +144,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="items.vm" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/conference/items.vm">
+      <file leaf-file-name="UserConferencesController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/UserConferencesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="33" selection-start="714" selection-end="715" vertical-scroll-proportion="-6.769231">
+            <state line="27" column="49" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginFailed.vm" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainPageController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/MainPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QunitTestRunner.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/QunitTestRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlainConferenceController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/PlainConferenceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginFailed.vm" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/loginFailed.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="14" selection-start="548" selection-end="548" vertical-scroll-proportion="0.73767257">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="292" column="15" selection-start="8281" selection-end="8295" vertical-scroll-proportion="0.0">
+            <state line="16" column="30" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -242,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/lists.vm" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/ConferenceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/UserConferencesController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sql/schema.sql" />
         <option value="$PROJECT_DIR$/src/test/resources/sql/test-data.sql" />
@@ -253,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/login.vm" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/blocks/nav.vm" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/loginFailed.vm" />
+        <option value="$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/ConferenceController.java" />
       </list>
     </option>
   </component>
@@ -324,7 +303,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -620,6 +598,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -635,12 +614,12 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -809,19 +788,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -848,6 +814,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1035,13 +1014,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.382906" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.62735045" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1059,10 +1037,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39166668" sideWeight="0.94700855" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.052991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.052991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.62735045" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1133,50 +1112,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/service/dao/ParticipantsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/PlainConferenceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/registration.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/HelloController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
@@ -1184,37 +1119,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/ConferenceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="13" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/UserConferencesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="49" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/conference/form.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="41.192307">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/conference/items.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="714" selection-end="715" vertical-scroll-proportion="-6.769231">
+        <state line="22" column="33" selection-start="714" selection-end="715" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1228,28 +1142,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="44" selection-start="1159" selection-end="1159" vertical-scroll-proportion="-1.72">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/login.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="41" selection-start="554" selection-end="554" vertical-scroll-proportion="-8.5">
+        <state line="20" column="44" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/blocks/nav.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="33" selection-start="283" selection-end="283" vertical-scroll-proportion="-3.9230769">
+        <state line="6" column="33" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/loginFailed.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="14" selection-start="548" selection-end="548" vertical-scroll-proportion="0.73767257">
+        <state line="16" column="30" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/ConferenceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="25" selection-start="9145" selection-end="9145" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/QunitTestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/PlainConferenceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="818" selection-end="818" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/UserConferencesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="49" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/MainPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lt/nfq/conference/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/login.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="41" selection-start="554" selection-end="554" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/velocity/lists.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="36" selection-start="2617" selection-end="2617" vertical-scroll-proportion="2.3247864">
           <folding />
         </state>
       </provider>

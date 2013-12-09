@@ -165,7 +165,7 @@ public class ConferenceController {
         conference.setEndDate(ends);
         conference.setCategory_id(newConferenceViewModel.getCategory_id());
         conference.setDescription(newConferenceViewModel.getDescription());
-        conference.setCreator_id(Integer.valueOf(1));
+        conference.setCreator_id(Integer.valueOf(USER_ID));
         conference.setStreet(newConferenceViewModel.getStreet());
         conference.setCity(newConferenceViewModel.getCity());
         return  conference;
@@ -195,13 +195,13 @@ public class ConferenceController {
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public String deleteConference(@RequestParam(value = "conference_id") int conference_id) {
         conferenceService.deleteConference(conference_id);
-        return "redirect:/lists";
+        return "redirect:lists";
     }
 
     @RequestMapping(value = "/cancel", method = RequestMethod.GET)
     public String cancelConference(@RequestParam(value = "conference_id") int conference_id) {
         participantsService.cancelParticipation(USER_ID, conference_id);
-        return "redirect:/lists";
+        return "redirect:lists";
     }
 
 
