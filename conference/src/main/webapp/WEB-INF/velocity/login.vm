@@ -12,6 +12,7 @@
     <body>
 <h1>Login:    sa</h1>
 <h1>Password: sa</h1>
+<h1>Arba galima užsiregistruoti</h1>
     <div id="wrapper_form1">
         <form class="form1" method="post" action="j_spring_security_check">
 
@@ -31,7 +32,7 @@
                 <div class="inputcontent">
 
                     <input type="password" name="j_password"/>
-                    <br/><a href="#">Forgot password?</a>
+                    <br/><a href="/registration">Registration</a>
 
                 </div>
             </div>

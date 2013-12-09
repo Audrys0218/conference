@@ -16,6 +16,8 @@ import lt.nfq.conference.service.UserService;
 import lt.nfq.conference.service.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -32,13 +34,14 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping(value = "/conference")
 public class ConferenceController {
-    private final static int USER_ID = 1;
     @Autowired
     private ConferenceService conferenceService;
     @Autowired
     private CategoryService categoryService;
     @Autowired
     private ParticipantsService participantsService;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list(ModelMap model) {
@@ -58,7 +61,8 @@ public class ConferenceController {
             System.out.println("Problem with finding conferenceList by given startDate and endDate");
             e.printStackTrace();
         }
-
+        System.out.println("================================================");
+        System.out.println(getLogedUserId());
         return "conference/list";
     }
 
@@ -144,8 +148,9 @@ public class ConferenceController {
         try {
             conference = newConferenceViewModelToConference(newConferenceViewModel);
             conferenceService.saveConference(conference);
-            model.addAttribute("createdConf", conferenceService.getConferencesByCreatorId(1));
+            model.addAttribute("createdConf", conferenceService.getConferencesByCreatorId(getLogedUserId()));
             model.addAttribute("dateFormat", getDateFormat());
+            model.addAttribute("participantsConf", getParticipantConferences());
         } catch (ParseException e) {
             //Aprasyti veiksmus, kai į datos laukelis suvedami blogo formato duomenys
             e.printStackTrace();
@@ -165,7 +170,7 @@ public class ConferenceController {
         conference.setEndDate(ends);
         conference.setCategory_id(newConferenceViewModel.getCategory_id());
         conference.setDescription(newConferenceViewModel.getDescription());
-        conference.setCreator_id(Integer.valueOf(USER_ID));
+        conference.setCreator_id(Integer.valueOf(getLogedUserId()));
         conference.setStreet(newConferenceViewModel.getStreet());
         conference.setCity(newConferenceViewModel.getCity());
         return  conference;
@@ -187,7 +192,7 @@ public class ConferenceController {
     public String participate(ModelMap model, @RequestParam(value = "conference_id") int conference_id) {
         Participants part = new Participants();
         part.setConference_id(conference_id);
-        part.setParticipant_id(USER_ID);
+        part.setParticipant_id(getLogedUserId());
         participantsService.saveParticipant(part);
         return "conference/list";
     }
@@ -200,14 +205,14 @@ public class ConferenceController {
 
     @RequestMapping(value = "/cancel", method = RequestMethod.GET)
     public String cancelConference(@RequestParam(value = "conference_id") int conference_id) {
-        participantsService.cancelParticipation(USER_ID, conference_id);
+        participantsService.cancelParticipation(getLogedUserId(), conference_id);
         return "redirect:lists";
     }
 
 
     @RequestMapping(value = "/lists", method = RequestMethod.GET)
     public String myConferences(ModelMap model) {
-        model.addAttribute("createdConf", conferenceService.getConferencesByCreatorId(USER_ID));
+        model.addAttribute("createdConf", conferenceService.getConferencesByCreatorId(getLogedUserId()));
         model.addAttribute("dateFormat", getDateFormat());
         model.addAttribute("participantsConf", getParticipantConferences());
         return "lists";
@@ -215,12 +220,17 @@ public class ConferenceController {
 
     private LinkedList<Conference> getParticipantConferences(){
         LinkedList<Conference> result = new LinkedList<>();
-        List<Participants> participants = participantsService.getParticipants(USER_ID);
+        List<Participants> participants = participantsService.getParticipants(getLogedUserId());
         for (Participants participant : participants) {
             result.add(conferenceService.getConference(participant.getConference_id()));
         }
         return result;
     }
 
+    private int getLogedUserId(){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.getUserByUsername(auth.getName());
+        return user.getId();
+    }
 
 }

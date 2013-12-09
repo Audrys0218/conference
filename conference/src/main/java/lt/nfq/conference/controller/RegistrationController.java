@@ -3,6 +3,7 @@ package lt.nfq.conference.controller;
 import lt.nfq.conference.ModelView.RegistrationViewModel;
 import lt.nfq.conference.domain.User;
 import lt.nfq.conference.service.UserService;
+import lt.nfq.conference.service.dao.UserRoleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -30,7 +31,7 @@ public class RegistrationController {
         }
         User user = regModelToUser(regModel);
         userService.saveUser(user);
-        return "conference/list";
+        return "login";
 
     }
     private User regModelToUser(RegistrationViewModel model){

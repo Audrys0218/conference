@@ -7,7 +7,6 @@
 </head>
 
 <body>
-    #parse("blocks/nav.vm")
 <div class="wrapper">
     <form class = "form2" action="/registration" method="POST">
 
