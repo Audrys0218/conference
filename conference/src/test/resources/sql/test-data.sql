@@ -15,6 +15,13 @@ INSERT INTO Categories (id, category_title) VALUES (1, 'Informacines technologij
 INSERT INTO Categories (id, category_title) VALUES (2, 'Marketingas');
 INSERT INTO Categories (id, category_title) VALUES (3, 'Mokymai');
 
+INSERT INTO user_roles (USER_ROLE_ID, USER_ID,AUTHORITY)
+VALUES (1, 1, 'ROLE_USER');
+INSERT INTO user_roles (USER_ROLE_ID, USER_ID,AUTHORITY)
+VALUES (2, 2, 'ROLE_USER');
+INSERT INTO user_roles (USER_ROLE_ID, USER_ID,AUTHORITY)
+VALUES (3, 3, 'ROLE_USER');
+
 INSERT INTO Participants (id, participant_id, conference_id) VALUES (1, 1, 1);
 INSERT INTO Participants (id, participant_id, conference_id) VALUES (2, 2, 2);
 INSERT INTO Participants (id, participant_id, conference_id) VALUES (3, 3, 3);

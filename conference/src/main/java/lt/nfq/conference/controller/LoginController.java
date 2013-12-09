@@ -12,8 +12,18 @@ public class LoginController {
         return "login";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
-        return "redirect:/conference/list";
+        return "login";
+    }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout() {
+        return "redirect:login";
+    }
+
+    @RequestMapping(value = "/loginfailed", method = RequestMethod.GET)
+    public String loginFailed() {
+        return "loginFailed";
     }
 }

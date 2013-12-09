@@ -204,4 +204,23 @@ public class ConferenceController {
         return "redirect:/lists";
     }
 
+
+    @RequestMapping(value = "/lists", method = RequestMethod.GET)
+    public String myConferences(ModelMap model) {
+        model.addAttribute("createdConf", conferenceService.getConferencesByCreatorId(USER_ID));
+        model.addAttribute("dateFormat", getDateFormat());
+        model.addAttribute("participantsConf", getParticipantConferences());
+        return "lists";
+    }
+
+    private LinkedList<Conference> getParticipantConferences(){
+        LinkedList<Conference> result = new LinkedList<>();
+        List<Participants> participants = participantsService.getParticipants(USER_ID);
+        for (Participants participant : participants) {
+            result.add(conferenceService.getConference(participant.getConference_id()));
+        }
+        return result;
+    }
+
+
 }

@@ -22,6 +22,13 @@ INSERT INTO Users (id, name, surname, username, password, email) VALUES (1, 'Aud
 INSERT INTO Users (id, name, surname, username, password, email) VALUES (2, 'AudriusB', 'BDanielevicius', 'BAudrys0218', 'BApassword', 'BAudrys0218@gmail.com');
 INSERT INTO Users (id, name, surname, username, password, email) VALUES (3, 'AudriusC', 'CDanielevicius', 'CAudrys0218', 'CApassword', 'CAudrys0218@gmail.com');
 
+-- INSERT INTO user_roles (USER_ROLE_ID, USER_ID,AUTHORITY)
+-- VALUES (1, 1, 'ROLE_USER');
+-- INSERT INTO user_roles (USER_ROLE_ID, USER_ID,AUTHORITY)
+-- VALUES (2, 2, 'ROLE_USER');
+-- INSERT INTO user_roles (USER_ROLE_ID, USER_ID,AUTHORITY)
+-- VALUES (3, 3, 'ROLE_USER');
+
 INSERT INTO Participants (id, participant_id, conference_id) VALUES (1, 1, 1);
 INSERT INTO Participants (id, participant_id, conference_id) VALUES (2, 2, 2);
 INSERT INTO Participants (id, participant_id, conference_id) VALUES (3, 3, 3);

@@ -3,6 +3,7 @@ DROP TABLE Users;
 DROP TABLE demo;
 DROP TABLE Categories;
 DROP TABLE Participants;
+DROP TABLE user_roles;
 
 CREATE TABLE demo (
 	id IDENTITY PRIMARY KEY,
@@ -28,6 +29,12 @@ CREATE TABLE  Users(
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE user_roles (
+  USER_ROLE_ID INT NOT NULL,
+  USER_ID INT NOT NULL,
+  AUTHORITY VARCHAR(45) NOT NULL
 );
 
 CREATE TABLE Categories(

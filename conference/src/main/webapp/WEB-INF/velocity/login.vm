@@ -10,42 +10,10 @@
 
     </style>
     <body>
-    <!--
-        <div class="container">
-            <form method="post" action="/login" class="form-signin">
-                <fieldset>
-                    <legend>User login:</legend>
-                    <div class="formGroup">
-                        <label for="user">Username:</label>
-                        <input type="text" id="user" name="user" class="form-control" autofocus/>
-                    </div>
-                    <div class="formGroup">
-                        <label for="pass">Password:</label>
-                        <input type="password" id="pass" name="password"/>
-                    </div>
-                    <div class="formGroup">
-                        <input type="submit" value="Login" id="login" class="btn btn-lg btn-primary btn-block">
-                        <input type="submit" value="Register" id="register" class="btn btn-lg btn-primary btn-block">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    <div class="container">
-
-        <form class="form-signin" method="post" action="/login">
-            <h2 class="form-signin-heading">User login:</h2>
-            <input type="text" class="form-control" placeholder="Email address" autofocus>
-            <input type="password" class="form-control" placeholder="Password">
-            <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        </form>
-
-    </div>            -->
-
+<h1>Login:    sa</h1>
+<h1>Password: sa</h1>
     <div id="wrapper_form1">
-        <form class="form1" method="post" action="/login">
+        <form class="form1" method="post" action="j_spring_security_check">
 
             <div class="formtitle">Login to your account</div>
 
@@ -53,7 +21,7 @@
                 <div class="inputtext">Username: </div>
                 <div class="inputcontent">
 
-                    <input type="text" />
+                    <input type="text" name="j_username"/>
 
                 </div>
             </div>
@@ -62,7 +30,7 @@
                 <div class="inputtext">Password: </div>
                 <div class="inputcontent">
 
-                    <input type="password" />
+                    <input type="password" name="j_password"/>
                     <br/><a href="#">Forgot password?</a>
 
                 </div>
