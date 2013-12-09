@@ -17,8 +17,6 @@
                         <th>Conference name</th>
                         <th>Starts</th>
                         <th>Ends</th>
-                        <th>Image1</th>
-                        <th>Image2</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -50,31 +48,19 @@
                     <th>Conference name</th>
                     <th>Starts</th>
                     <th>Ends</th>
-                    <th><a href="">CancelImg</a></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Informacines technologijos</td>
-                    <td>2013-02-13</td>
-                    <td>2013-02-13</td>
-                    <td><a href="">Cancel</a></td>
-                </tr>
-                <tr>
-                    <td>Ziniasklaidos indzinerija</td>
-                    <td>2013-02-13</td>
-                    <td>2013-02-13</td>
-                    <td><a href="">Cancel</a></td>
-                </tr>
-                <tr>
-                    <td>Css ir html</td>
-                    <td>2013-02-13</td>
-                    <td>2013-02-13</td>
-                    <td><a href="">Cancel</a></td>
-                </tr>
+                    #foreach($conference in $participantsConf)
+                    <tr data-id="$conference.getId()">
+                        <td>$conference.getName()</td>
+                        <td>$conference.getStartDate($dateFormat)</td>
+                        <td>$conference.getEndDate($dateFormat)</td>
+                        <td><a href="/conference/update?id=$conference.getId()" >Cancel</a></td>
+                    </tr>
+                    #end
                 </tbody>
             </table>
         </div>
     <div>
 </body>
-</html>

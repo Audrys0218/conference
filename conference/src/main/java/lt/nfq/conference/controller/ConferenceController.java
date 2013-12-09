@@ -178,5 +178,4 @@ public class ConferenceController {
         result.setTitle(conference.getName());
         return result;
     }
-
 }
