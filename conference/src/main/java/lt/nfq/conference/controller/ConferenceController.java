@@ -7,8 +7,13 @@ import java.util.*;
 import lt.nfq.conference.ModelView.NewConferenceViewModel;
 import lt.nfq.conference.domain.Category;
 import lt.nfq.conference.domain.Conference;
+import lt.nfq.conference.domain.Participants;
+import lt.nfq.conference.domain.User;
 import lt.nfq.conference.service.CategoryService;
 import lt.nfq.conference.service.ConferenceService;
+import lt.nfq.conference.service.ParticipantsService;
+import lt.nfq.conference.service.UserService;
+import lt.nfq.conference.service.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -27,11 +32,13 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping(value = "/conference")
 public class ConferenceController {
-
+    private final static int USER_ID = 1;
     @Autowired
     private ConferenceService conferenceService;
     @Autowired
     private CategoryService categoryService;
+    @Autowired
+    private ParticipantsService participantsService;
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list(ModelMap model) {
@@ -61,9 +68,6 @@ public class ConferenceController {
                              @RequestParam(value = "end") Date end,
                              @RequestParam(value = "category_id") int category_id) {
         LinkedList<Conference> conferenceList =  conferencesWithCateCategory_id(conferenceService.getConferencesByDates(start, end), category_id);
-        System.out.println("===============================================================================");
-        System.out.println(conferenceList);
-        System.out.println(category_id);
         model.addAttribute("conferenceList", conferenceList);
         model.addAttribute("dateFormat", getDateFormat());
 
@@ -178,4 +182,26 @@ public class ConferenceController {
         result.setTitle(conference.getName());
         return result;
     }
+
+    @RequestMapping(value = "/participate", method = RequestMethod.GET)
+    public String participate(ModelMap model, @RequestParam(value = "conference_id") int conference_id) {
+        Participants part = new Participants();
+        part.setConference_id(conference_id);
+        part.setParticipant_id(USER_ID);
+        participantsService.saveParticipant(part);
+        return "conference/list";
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    public String deleteConference(@RequestParam(value = "conference_id") int conference_id) {
+        conferenceService.deleteConference(conference_id);
+        return "redirect:/lists";
+    }
+
+    @RequestMapping(value = "/cancel", method = RequestMethod.GET)
+    public String cancelConference(@RequestParam(value = "conference_id") int conference_id) {
+        participantsService.cancelParticipation(USER_ID, conference_id);
+        return "redirect:/lists";
+    }
+
 }

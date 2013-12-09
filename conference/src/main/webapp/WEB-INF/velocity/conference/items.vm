@@ -1,6 +1,6 @@
 #if ($conferenceList.size() > 0)
 
-<div class="wrapper">
+##<div class="wrapper">
 ##    <div class="tablebody">
 ##        <div class="tabletitle">Which I created</div>
 ##        <table class="createdtable">
@@ -15,6 +15,8 @@
                         <th>Conference name</th>
                         <th>Starts</th>
                         <th>Ends</th>
+                        <th>City</th>
+                        <th>Street</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -23,7 +25,9 @@
                             <td>$conference.getName()</td>
                             <td>$conference.getStartDate($dateFormat)</td>
                             <td>$conference.getEndDate($dateFormat)</td>
-                            <td><a href="/conference/update?id=$conference.getId()" class="edit">Participate</a></td>
+                            <td>$conference.getCity()</td>
+                            <td>$conference.getStreet()</td>
+                            <td><a href="/conference/participate?conference_id=$conference.getId()">Participate</a></td>
                         </tr>
                         #end
                     </tbody>

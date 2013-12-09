@@ -8,6 +8,8 @@ import lt.nfq.conference.domain.Conference;
 import org.apache.ibatis.annotations.*;
 
 public interface ConferenceMapper {
+    @Delete("DELETE FROM conference WHERE id=#{id}")
+    public int deleteConference(@Param("id") int id);
 
     @Select("SELECT * FROM conference WHERE creator_id=#{creator_id}")
     public List<Conference> getConferenceByCreatorId(@Param("creator_id") int creator_id);

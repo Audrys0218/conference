@@ -15,6 +15,10 @@ public class ConferenceService {
     @Autowired
     private ConferenceMapper conferenceMapper;
 
+    public int deleteConference(int id){
+        return conferenceMapper.deleteConference(id);
+    }
+
     public List<Conference> getConferencesByCreatorId(int creator_id){
         return conferenceMapper.getConferenceByCreatorId(creator_id);
     }

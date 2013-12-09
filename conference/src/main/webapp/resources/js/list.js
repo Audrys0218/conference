@@ -16,6 +16,21 @@
             }
         });
     });
+
+//    jQuery( ".participate" ).on("click", function (e) {
+//        e.preventDefault();
+//        jQuery.ajax({
+//            type: "post",
+//            url: "/conference/participate",
+//            data: {
+//                conference_id:
+//            }
+////            success: function( data ) {
+////                jQuery( "#conference" ).html( data );
+////            }
+//        });
+//    });
+
     jQuery("#conference .edit").on("click", function (e) {
         e.preventDefault();
         jQuery.ajax({

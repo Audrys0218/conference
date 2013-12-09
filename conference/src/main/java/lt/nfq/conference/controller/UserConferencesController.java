@@ -26,7 +26,7 @@ public class UserConferencesController {
 
     @RequestMapping(value = "/lists", method = RequestMethod.GET)
     public String myConferences(ModelMap model) {
-        model.addAttribute("createdConf", conferenceService.getConferencesByCreatorId(1));
+        model.addAttribute("createdConf", conferenceService.getConferencesByCreatorId(USER_ID));
         model.addAttribute("dateFormat", getDateFormat());
         model.addAttribute("participantsConf", getParticipantConferences());
         return "lists";

@@ -284,7 +284,7 @@ body {
     width: 20%;
 }
 .createdtable, .participatetable {
-    width:100%
+    width: 98%;
 }
 .participatetable td{
     width: 25%
