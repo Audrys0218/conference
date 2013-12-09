@@ -61,6 +61,9 @@ public class ConferenceController {
                              @RequestParam(value = "end") Date end,
                              @RequestParam(value = "category_id") int category_id) {
         LinkedList<Conference> conferenceList =  conferencesWithCateCategory_id(conferenceService.getConferencesByDates(start, end), category_id);
+        System.out.println("===============================================================================");
+        System.out.println(conferenceList);
+        System.out.println(category_id);
         model.addAttribute("conferenceList", conferenceList);
         model.addAttribute("dateFormat", getDateFormat());
 
@@ -117,12 +120,12 @@ public class ConferenceController {
         return new SimpleDateFormat("yyyy-MM-dd");
     }
 
-//    @InitBinder
-//    public void initBinder(WebDataBinder binder) {
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-//        dateFormat.setLenient(false);
-//        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
-//    }
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        dateFormat.setLenient(false);
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+    }
 
     //Mano requestmappingai
 

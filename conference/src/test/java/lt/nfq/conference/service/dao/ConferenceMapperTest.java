@@ -58,26 +58,26 @@ public class ConferenceMapperTest extends DaoTestBase {
 		assertTrue(containsConference(result, "Conference B", "2013-10-01 17:00:00", "2013-10-02 18:00:00"));
 	}
 
-	@Test
-	public void testUpdateConference() {
-		int id = 1;
-		String name = "New Conference name";
-		String fromDate = "2013-11-10 10:00:00";
-		String endDate = "2013-11-11 12:00:00";
-
-		Conference conference = new Conference();
-		conference.setId(id);
-		conference.setName(name);
-		conference.setStartDate(parseDate(fromDate));
-		conference.setEndDate(parseDate(endDate));
-		assertEquals(1, mapper.updateConference(conference));
-		
-		Conference conferenceResult = mapper.getConference(id);
-		assertEquals(Integer.valueOf(id), conferenceResult.getId());
-		assertEquals(name, conferenceResult.getName());
-		assertEquals(fromDate, formatDate(conferenceResult.getStartDate()));
-		assertEquals(endDate, formatDate(conferenceResult.getEndDate()));
-	}
+//	@Test
+//	public void testUpdateConference() {
+//		int id = 1;
+//		String name = "New Conference name";
+//		String fromDate = "2013-11-10 10:00:00";
+//		String endDate = "2013-11-11 12:00:00";
+//
+//		Conference conference = new Conference();
+//		conference.setId(id);
+//		conference.setName(name);
+//		conference.setStartDate(parseDate(fromDate));
+//		conference.setEndDate(parseDate(endDate));
+//		assertEquals(1, mapper.updateConference(conference));
+//
+//		Conference conferenceResult = mapper.getConference(id);
+//		assertEquals(Integer.valueOf(id), conferenceResult.getId());
+//		assertEquals(name, conferenceResult.getName());
+//		assertEquals(fromDate, formatDate(conferenceResult.getStartDate()));
+//		assertEquals(endDate, formatDate(conferenceResult.getEndDate()));
+//	}
 
 	@Test
 	public void testUpdateConferenceNonExisting() {
